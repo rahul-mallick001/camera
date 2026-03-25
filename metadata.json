@@ -1,0 +1,8 @@
+{
+  "name": "Pro Camera Studio",
+  "description": "A professional video recording application with real-time image property controls and full-screen visualization.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

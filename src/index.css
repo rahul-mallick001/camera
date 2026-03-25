@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-beige-bg: #F5F2ED;
+  --color-beige-sidebar: #EBE8E2;
+  --color-ink: #1A1A1A;
+  --color-ink-muted: #4A4A4A;
+  --color-line: #D1CDC7;
+}
+
+@layer base {
+  body {
+    @apply bg-beige-bg text-ink font-sans antialiased;
+  }
+}
+
+/* ROI Sidebar Section Styling */
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) {
+  background: linear-gradient(to right, rgba(255, 68, 68, 0.08), transparent);
+  border-left: 2px solid #FF4444;
+  padding-left: 16px;
+  margin-left: -16px;
+}
+
+/* ROI Box Viewport Styling */
+div#root:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6); /* Darker dim for better contrast */
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-beige-sidebar);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-muted);
+}
